@@ -169,12 +169,12 @@ def authors_html(names):
 
 
 def entry_html(r):
-    links = [f'<a class="publink" href="https://pubmed.ncbi.nlm.nih.gov/{r["pmid"]}/">PubMed</a>']
+    links = [f'<a class="publink" target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/{r["pmid"]}/">PubMed</a>']
     if r["doi"]:
-        links.append(f'<a class="publink" href="https://doi.org/{esc(r["doi"])}">DOI</a>')
+        links.append(f'<a class="publink" target="_blank" rel="noopener" href="https://doi.org/{esc(r["doi"])}">DOI</a>')
     if r["pmc"]:
         links.append('<a class="publink" '
-                     f'href="https://www.ncbi.nlm.nih.gov/pmc/articles/{esc(r["pmc"])}/">Free full text</a>')
+                     f'target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/{esc(r["pmc"])}/">Free full text</a>')
     hay = esc(" ".join([r["title"]] + r["authors"] + [r["journal"]]).lower().replace('"', ""))
     return (f'      <div class="pubitem" data-tags="{" ".join(r["tags"])}" data-kind="{r["kind"]}" '
             f'data-year="{r["year"]}" data-search="{hay}">\n'
