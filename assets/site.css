@@ -47,7 +47,8 @@ h2.sec{font-family:"Archivo",sans-serif;font-weight:700;font-size:38px;line-heig
 }
 .head img{height:54px;width:auto;}
 .nav{margin-left:auto;display:flex;gap:26px;align-items:center;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:17px;font-weight:600;}
-.nav a{text-decoration:none;color:var(--blue);padding-bottom:2px;border-bottom:1.5px solid transparent;}
+.nav a{text-decoration:none;color:var(--blue);padding:2px 0;
+  border-top:1.5px solid transparent;border-bottom:1.5px solid transparent;}
 .nav a.on,.nav a:hover{border-bottom-color:var(--blue);}
 .navitem{position:relative;display:inline-flex;}
 .dropwrap{position:absolute;top:100%;left:-16px;padding-top:16px;z-index:70;
@@ -61,7 +62,7 @@ h2.sec{font-family:"Archivo",sans-serif;font-weight:700;font-size:38px;line-heig
 .drop a{font-family:"Archivo",sans-serif;font-size:14.5px;font-weight:500;
   padding:8px 12px;border-radius:8px;border-bottom:0;white-space:nowrap;color:var(--ink);}
 .drop a:hover{background:var(--peri);color:var(--blue);border-bottom-color:transparent;}
-[id]{scroll-margin-top:132px;}
+[id]{scroll-margin-top:148px;}
 .btn{
   font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:14px;text-decoration:none;font-weight:500;
   padding:13px 26px;border-radius:9px;display:inline-block;
@@ -69,7 +70,7 @@ h2.sec{font-family:"Archivo",sans-serif;font-weight:700;font-size:38px;line-heig
   transition:background .16s ease,color .16s ease;
 }
 .btn:hover{background:#48260C;color:var(--white);border-color:#48260C;}
-.head .btn{background:#000000;border-color:#000000;font-size:15px;}
+.head .btn{background:#000000;border-color:#000000;font-size:17px;font-weight:600;}
 .head .btn:hover{background:#1C1C1C;border-color:#1C1C1C;}
 .btn.light{background:var(--white);color:var(--blue);border-color:var(--white);}
 .btn.light:hover{background:var(--peri);color:var(--blue-deep);border-color:var(--peri);}
