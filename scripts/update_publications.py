@@ -98,7 +98,7 @@ def fetch(pmids):
 
 
 def parse(art):
-    ids = {e.get("IdType"): (e.text or "").strip() for e in art.findall(".//ArticleIdList/ArticleId")}
+    ids = {e.get("IdType"): (e.text or "").strip() for e in art.findall("PubmedData/ArticleIdList/ArticleId")}
     authors = []
     for a in art.findall(".//AuthorList/Author"):
         last, initials = text(a, "LastName"), text(a, "Initials")
@@ -114,7 +114,7 @@ def parse(art):
         year = text(art, ".//PubMedPubDate[@PubStatus='pubmed']/Year")
 
     return {
-        "pmid": text(art, ".//PMID"),
+        "pmid": text(art, "MedlineCitation/PMID"),
         "doi": ids.get("doi", ""),
         "pmc": ids.get("pmc", ""),
         "title": text(art, ".//Article/ArticleTitle").rstrip("."),
@@ -174,7 +174,7 @@ def entry_html(r):
         links.append(f'<a class="publink" target="_blank" rel="noopener" href="https://doi.org/{esc(r["doi"])}">DOI</a>')
     if r["pmc"]:
         links.append('<a class="publink" '
-                     f'target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/{esc(r["pmc"])}/">Free full text</a>')
+                     f'target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov/articles/{esc(r["pmc"])}/">Free full text</a>')
     hay = esc(" ".join([r["title"]] + r["authors"] + [r["journal"]]).lower().replace('"', ""))
     return (f'      <div class="pubitem" data-tags="{" ".join(r["tags"])}" data-kind="{r["kind"]}" '
             f'data-year="{r["year"]}" data-search="{hay}">\n'
