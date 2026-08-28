@@ -260,7 +260,9 @@ h2.sec{font-family:"Archivo",sans-serif;font-weight:700;font-size:38px;line-heig
   position:sticky;top:108px;z-index:30;background:var(--white);
   border-bottom:1px solid var(--line);padding:18px 0 16px;margin-bottom:8px;
   display:flex;flex-direction:column;gap:14px;
+  transition:transform .26s cubic-bezier(.4,0,.2,1);
 }
+.filterbar.tuck{transform:translateY(calc(-100% - 14px));pointer-events:none;}
 .filterrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
 .filterlabel{
   font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;
