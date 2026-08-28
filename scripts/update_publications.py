@@ -168,6 +168,26 @@ def authors_html(names):
     return out + ", ".join(one(n) for n in tail)
 
 
+# ------------------------------------------------------------------ overrides
+# PubMed's own record is wrong for a few papers. Keyed by PMID.
+#   title_html : replaces the displayed title, may contain <sup>/<i>
+#   kind       : research | review | meeting
+OVERRIDES = {
+    # PubMed dropped the superscripts and tagged this primary paper as a Review
+    "41936809": {
+        "title_html": ("Epm2b<sup>P71A</sup> and Epm2b<sup>D148N</sup> knock-in mouse models "
+                       "of Lafora disease exhibit distinct and pronounced neurological alterations"),
+        "kind": "research",
+    },
+}
+
+def apply_overrides(r):
+    o = OVERRIDES.get(r["pmid"])
+    if o:
+        r.update(o)
+    return r
+
+
 def entry_html(r):
     links = [f'<a class="publink" target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/{r["pmid"]}/">PubMed</a>']
     if r["doi"]:
@@ -178,7 +198,7 @@ def entry_html(r):
     hay = esc(" ".join([r["title"]] + r["authors"] + [r["journal"]]).lower().replace('"', ""))
     return (f'      <div class="pubitem" data-tags="{" ".join(r["tags"])}" data-kind="{r["kind"]}" '
             f'data-year="{r["year"]}" data-search="{hay}">\n'
-            f'        <div class="pubtitle">{esc(r["title"])}</div>\n'
+            f'        <div class="pubtitle">{r.get("title_html") or esc(r["title"])}</div>\n'
             f'        <div class="pubauthors">{authors_html(r["authors"])}</div>\n'
             f'        <div class="pubmeta"><span class="pubjournal">{esc(r["journal"])} {r["year"]}</span>'
             f'{"".join(links)}</div>\n'
@@ -204,7 +224,7 @@ def main():
                 pmids.append(p)
     print(f"{len(pmids):4d}  unique PMIDs")
 
-    records = [classify(r) for r in fetch(pmids)]
+    records = [apply_overrides(classify(r)) for r in fetch(pmids)]
     records = [r for r in records if keep(r)]
     records.sort(key=lambda r: (-r["year"], r["title"]))
     print(f"{len(records):4d}  after filtering")
