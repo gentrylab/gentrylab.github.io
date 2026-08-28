@@ -57,7 +57,7 @@
       <div class="person">
         <div class="shot">LF<img src="assets/people/lea-fermont.jpg" alt="Léa Fermont" onerror="this.remove()"></div>
         <div>
-          <div class="nm">Léa Fermont</div>
+          <div class="nm">Léa Fermont, PhD</div>
           
           <div class="ri">[Research interest, about forty words. One or two sentences on what this person works on in the lab. Replace this text.]</div>
         </div>
@@ -65,7 +65,7 @@
       <div class="person">
         <div class="shot">MC<img src="assets/people/matthieu-colpaert.jpg" alt="Matthieu Colpaert" onerror="this.remove()"></div>
         <div>
-          <div class="nm">Matthieu Colpaert</div>
+          <div class="nm">Matthieu Colpaert, PhD</div>
           
           <div class="ri">[Research interest, about forty words. One or two sentences on what this person works on in the lab. Replace this text.]</div>
         </div>
@@ -73,7 +73,7 @@
       <div class="person">
         <div class="shot">PS<img src="assets/people/pankaj-singh.jpg" alt="Pankaj Singh" onerror="this.remove()"></div>
         <div>
-          <div class="nm">Pankaj Singh</div>
+          <div class="nm">Pankaj Singh, PhD</div>
           
           <div class="ri">[Research interest, about forty words. One or two sentences on what this person works on in the lab. Replace this text.]</div>
         </div>
@@ -81,7 +81,7 @@
       <div class="person">
         <div class="shot">TC<img src="assets/people/tiantian-chen.jpg" alt="Tiantian Chen" onerror="this.remove()"></div>
         <div>
-          <div class="nm">Tiantian Chen</div>
+          <div class="nm">Tiantian Chen, PhD</div>
           
           <div class="ri">[Research interest, about forty words. One or two sentences on what this person works on in the lab. Replace this text.]</div>
         </div>
@@ -327,7 +327,7 @@
     <div class="footgrid">
       <div>
         <h4>Contact</h4>
-        <p><a href="mailto:[LAB EMAIL]">[LAB EMAIL]</a><br>[PHONE]<br><a href="#">LinkedIn</a></p>
+        <p><a href="mailto:[LAB EMAIL]">[LAB EMAIL]</a><br>[PHONE]</p>
       </div>
       <div>
         <h4>Address</h4>
@@ -344,5 +344,25 @@
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var els=[document.querySelector(".headwrap"),document.querySelector(".filterbar")].filter(Boolean);
+  if(!els.length) return;
+  var last=window.scrollY, queued=false;
+  function onScroll(){
+    var y=window.scrollY, d=y-last;
+    if(Math.abs(d)>5){
+      if(d>0 && y>260) els.forEach(function(e){e.classList.add("tuck");});
+      else if(d<0)     els.forEach(function(e){e.classList.remove("tuck");});
+      last=y;
+    }
+    queued=false;
+  }
+  window.addEventListener("scroll",function(){
+    if(!queued){queued=true;requestAnimationFrame(onScroll);}
+  },{passive:true});
+})();
+</script>
+
 </body>
 </html>

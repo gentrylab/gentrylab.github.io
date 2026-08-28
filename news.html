@@ -110,7 +110,7 @@
     <div class="footgrid">
       <div>
         <h4>Contact</h4>
-        <p><a href="mailto:[LAB EMAIL]">[LAB EMAIL]</a><br>[PHONE]<br><a href="#">LinkedIn</a></p>
+        <p><a href="mailto:[LAB EMAIL]">[LAB EMAIL]</a><br>[PHONE]</p>
       </div>
       <div>
         <h4>Address</h4>
@@ -127,5 +127,25 @@
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var els=[document.querySelector(".headwrap"),document.querySelector(".filterbar")].filter(Boolean);
+  if(!els.length) return;
+  var last=window.scrollY, queued=false;
+  function onScroll(){
+    var y=window.scrollY, d=y-last;
+    if(Math.abs(d)>5){
+      if(d>0 && y>260) els.forEach(function(e){e.classList.add("tuck");});
+      else if(d<0)     els.forEach(function(e){e.classList.remove("tuck");});
+      last=y;
+    }
+    queued=false;
+  }
+  window.addEventListener("scroll",function(){
+    if(!queued){queued=true;requestAnimationFrame(onScroll);}
+  },{passive:true});
+})();
+</script>
+
 </body>
 </html>
