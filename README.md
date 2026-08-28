@@ -53,5 +53,5 @@ domain, and tick **Enforce HTTPS**.
 
 ## Credits
 
-Hero image and group photograph: Gentry Lab. Type: Lora, Archivo and IBM Plex
+Image and group photograph: Gentry Lab. Type: Lora, Archivo and IBM Plex
 Mono via Google Fonts.
