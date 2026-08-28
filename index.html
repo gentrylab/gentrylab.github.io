@@ -3,266 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex">
 <title>Gentry Laboratory</title>
 <meta name="description" content="The Gentry Laboratory at the University of Florida studies glycogen metabolism and the storage, neurodegenerative and cancer diseases it drives.">
 <link rel="icon" href="assets/favicon-simple-512.png" type="image/png" sizes="512x512">
 <link rel="icon" href="assets/favicon-simple-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-:root{
-  --blue:#2246B5;
-  --blue-deep:#16308A;
-  --brown:#2E1706;
-  --peri:#E8EDF7;
-  --grey:#F2F2F2;
-  --white:#FFFFFF;
-
-  --ink:#15192B;
-  --muted:#585F77;
-  --line:#DCE1EF;
-
-  --shell:1240px;
-  --pad:56px;
-}
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;background:var(--white);color:var(--ink);
-  font-family:"Archivo",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
-  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-a{color:var(--blue);}
-a:hover{color:var(--blue-deep);}
-:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px;}
-img{max-width:100%;display:block;}
-@media (prefers-reduced-motion: reduce){*{animation-duration:.001ms !important;transition-duration:.001ms !important;}}
-
-.shell{max-width:var(--shell);margin:0 auto;padding:0 var(--pad);}
-
-/* ---------- type roles ---------- */
-.eyebrow{
-  font-family:"IBM Plex Mono",ui-monospace,monospace;
-  font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);
-  margin:0;
-}
-h1,h2,h3{margin:0;text-wrap:balance;}
-h2.sec{
-  font-family:"Lora",Georgia,serif;font-weight:600;
-  font-size:38px;line-height:1.16;letter-spacing:-.015em;color:var(--ink);
-}
-.lede{font-size:18.5px;line-height:1.62;color:var(--muted);margin:0;}
-
-/* ---------- floating header ---------- */
-.headwrap{position:fixed;top:14px;left:0;right:0;z-index:60;padding:0 24px;pointer-events:none;}
-.head{
-  max-width:calc(var(--shell) - 40px);margin:0 auto;pointer-events:auto;
-  background:var(--white);border-radius:22px;
-  box-shadow:0 2px 6px rgba(21,25,43,.06),0 14px 40px rgba(21,25,43,.10);
-  display:flex;align-items:center;gap:28px;padding:14px 16px 14px 26px;
-}
-.head img{height:46px;width:auto;}
-.nav{
-  margin-left:auto;display:flex;gap:26px;align-items:center;
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:14px;
-}
-.nav a{text-decoration:none;color:var(--blue);padding-bottom:2px;border-bottom:1.5px solid transparent;}
-.nav a.on,.nav a:hover{border-bottom-color:var(--blue);}
-.btn{
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:14px;
-  text-decoration:none;padding:13px 26px;border-radius:9px;display:inline-block;
-  background:var(--brown);color:var(--white);border:1.5px solid var(--brown);
-  transition:background .16s ease,color .16s ease;
-}
-.btn:hover{background:#48260C;color:var(--white);border-color:#48260C;}
-.btn.light{background:var(--white);color:var(--brown);border-color:var(--white);}
-.btn.light:hover{background:var(--peri);color:var(--brown);border-color:var(--peri);}
-.btn.blue{background:var(--blue);border-color:var(--blue);color:#fff;}
-.btn.blue:hover{background:var(--blue-deep);border-color:var(--blue-deep);}
-
-/* ---------- hero ---------- */
-.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden;background:#000;}
-.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.hero .scrim{
-  position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(0,0,0,.80) 0%,rgba(0,0,0,.55) 38%,rgba(0,0,0,.12) 72%,rgba(0,0,0,0) 100%);
-}
-.hero .scrim2{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 42%);}
-.hero-in{position:relative;width:100%;padding:0 0 84px;}
-.hero h1{
-  font-family:"Lora",Georgia,serif;font-weight:600;color:#fff;
-  font-size:clamp(38px,4.4vw,60px);line-height:1.08;letter-spacing:-.02em;
-  margin:0 0 20px;
-}
-.hero p{color:#D9E0F2;font-size:19px;line-height:1.58;max-width:52ch;margin:0 0 30px;}
-.hero .cta{display:flex;gap:14px;flex-wrap:wrap;}
-.figcred{
-  position:absolute;right:var(--pad);bottom:26px;
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;
-  color:rgba(255,255,255,.62);letter-spacing:.04em;text-align:right;max-width:34ch;
-}
-
-/* ---------- approach ---------- */
-.approach{padding:96px 0 88px;}
-.approach .top{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;}
-.arc{
-  font-family:"Archivo",sans-serif;font-weight:600;color:var(--blue);
-  font-size:clamp(30px,3.6vw,48px);letter-spacing:-.022em;line-height:1.1;margin:0;
-}
-.arc span{color:var(--brown);font-weight:400;padding:0 .12em;}
-.approach .top .blurb{max-width:60ch;font-size:17.5px;color:var(--muted);margin:6px 0 0;}
-.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:56px;}
-.step{border-top:2px solid var(--blue);padding-top:18px;display:flex;flex-direction:column;gap:9px;}
-.step h3{font-family:"Lora",Georgia,serif;font-weight:600;font-size:22px;letter-spacing:-.01em;}
-.step p{margin:0;font-size:16px;color:var(--muted);line-height:1.6;}
-
-/* ---------- research ---------- */
-.research{background:var(--peri);padding:92px 0;}
-.sechead{display:flex;flex-direction:column;gap:12px;margin-bottom:44px;max-width:62ch;}
-.pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
-.pillar{
-  background:var(--white);border-radius:16px;padding:30px 32px;
-  display:flex;flex-direction:column;gap:12px;
-}
-.pillar .tag{
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--brown);
-}
-.pillar h3{font-family:"Lora",Georgia,serif;font-weight:600;font-size:24px;letter-spacing:-.012em;line-height:1.22;}
-.pillar p{margin:0;font-size:16.2px;color:var(--muted);line-height:1.6;}
-
-.factrow{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:22px;}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;background:var(--white);border-radius:16px;padding:28px 32px;}
-.stat b{
-  display:block;font-family:"Archivo",sans-serif;font-weight:700;font-size:34px;
-  color:var(--blue);line-height:1.05;letter-spacing:-.025em;font-variant-numeric:tabular-nums;
-}
-.stat span{display:block;font-size:14.5px;color:var(--muted);margin-top:8px;line-height:1.45;}
-.leci{
-  background:var(--brown);color:#F0E7DF;border-radius:16px;padding:28px 32px;
-  display:flex;flex-direction:column;gap:10px;
-}
-.leci h3{font-family:"Lora",Georgia,serif;font-weight:600;font-size:20px;color:#fff;line-height:1.25;}
-.leci p{margin:0;font-size:15.5px;line-height:1.55;color:#CBB9AC;}
-
-/* ---------- people ---------- */
-.people{padding:92px 0;}
-.peoplegrid{display:grid;grid-template-columns:320px minmax(0,1fr);gap:44px;}
-.pi{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--white);}
-.pi .ph{
-  aspect-ratio:4/5;background:linear-gradient(155deg,#DCE2F2,#B9C4E4);
-  display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px;
-  font-family:"Lora",serif;font-weight:600;font-size:52px;color:#7C88B4;
-}
-.pi .txt{padding:22px 24px;display:flex;flex-direction:column;gap:8px;}
-.pi h3{font-family:"Lora",Georgia,serif;font-weight:600;font-size:21px;}
-.pi .role{font-size:14.5px;color:var(--blue);margin:0;}
-.pi p{margin:0;font-size:14.8px;color:var(--muted);line-height:1.55;}
-.roster{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-content:start;}
-.member{border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px;}
-.member .av{
-  width:46px;height:46px;border-radius:50%;background:var(--peri);
-  display:flex;align-items:center;justify-content:center;
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:14px;color:var(--blue);
-}
-.member b{font-family:"Archivo",sans-serif;font-size:15px;font-weight:600;display:block;}
-.member span{font-size:13px;color:var(--muted);display:block;margin-top:2px;}
-.more{
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13.5px;
-  text-decoration:none;color:var(--blue);border-bottom:1.5px solid var(--blue);
-  align-self:start;padding-bottom:2px;
-}
-
-/* ---------- publications ---------- */
-.pubs{background:var(--grey);padding:92px 0;}
-.publist{display:flex;flex-direction:column;border-top:1px solid var(--line);}
-.pub{
-  display:grid;grid-template-columns:70px minmax(0,1fr) 210px;gap:26px;align-items:baseline;
-  padding:20px 0;border-bottom:1px solid var(--line);
-}
-.pub .yr{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;}
-.pub .ttl{font-size:17px;line-height:1.45;}
-.pub .jr{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12.5px;color:var(--blue);text-align:right;}
-.ph-row{
-  border:1px dashed #C7CDDD;border-radius:8px;padding:9px 13px;
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12.5px;color:var(--muted);
-}
-
-/* ---------- news ---------- */
-.news{padding:92px 0;}
-.newsgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 46px;}
-.newsitem{display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;padding:18px 0;border-top:1px solid var(--line);align-items:baseline;}
-.newsitem .d{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--brown);}
-.newsitem .x{font-size:16.4px;line-height:1.5;}
-
-/* ---------- join ---------- */
-.join{background:var(--brown);color:#F3EBE4;padding:84px 0;}
-.joingrid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:44px;align-items:center;}
-.join h2{font-family:"Lora",Georgia,serif;font-weight:600;font-size:clamp(28px,3.2vw,40px);color:#fff;line-height:1.14;letter-spacing:-.018em;max-width:20ch;margin:0 0 14px;}
-.join p{margin:0;color:#C9B7A9;font-size:17px;max-width:54ch;}
-
-/* ---------- footer ---------- */
-.foot{
-  position:relative;padding:76px 0 56px;
-  background:
-    radial-gradient(62% 105% at 10% 108%, rgba(46,190,124,.50) 0%, rgba(46,190,124,0) 68%),
-    radial-gradient(55% 95% at 44% 116%, rgba(120,214,168,.44) 0%, rgba(120,214,168,0) 70%),
-    radial-gradient(72% 110% at 90% 104%, rgba(34,70,181,.20) 0%, rgba(34,70,181,0) 68%),
-    linear-gradient(180deg,#FFFFFF 0%,#EEF2F9 100%);
-}
-.footgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;}
-.foot h4{
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--brown);margin:0 0 16px;font-weight:500;
-}
-.foot p{margin:0;font-size:15.5px;line-height:1.75;color:var(--ink);}
-.foot a{text-decoration:none;border-bottom:1px solid rgba(34,70,181,.35);}
-.footlogo{margin-top:44px;display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;}
-.footlogo img{height:64px;width:auto;}
-.copy{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;color:var(--muted);}
-.funders{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px;}
-.funder{
-  border:1px dashed #B9C2D6;border-radius:8px;padding:12px 18px;
-  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted);
-}
-
-/* narrow desktop / tablet — a real phone layout comes later */
-@media (max-width:1080px){
-  :root{--pad:28px;}
-  .nav{display:none;}
-  .steps{grid-template-columns:1fr;}
-  .pillars{grid-template-columns:1fr;}
-  .factrow{grid-template-columns:1fr;}
-  .stats{grid-template-columns:1fr;}
-  .peoplegrid{grid-template-columns:1fr;}
-  .roster{grid-template-columns:repeat(2,minmax(0,1fr));}
-  .newsgrid{grid-template-columns:1fr;}
-  .pub{grid-template-columns:60px minmax(0,1fr);}
-  .pub .jr{display:none;}
-  .joingrid{grid-template-columns:1fr;}
-  .footgrid{grid-template-columns:1fr;}
-}
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-
 <div class="headwrap">
   <header class="head">
-    <a href="#top" aria-label="Gentry Laboratory — home"><img src="assets/logo-lockup.png" alt="Gentry Laboratory, University of Florida"></a>
+    <a href="index.html" aria-label="Gentry Laboratory, home"><img src="assets/logo-lockup.png" alt="Gentry Laboratory, University of Florida"></a>
     <nav class="nav">
-      <a href="#research" class="on">Research</a>
-      <a href="#people">People</a>
-      <a href="#publications">Publications</a>
-      <a href="#news">News</a>
+      <a href="index.html#research" class="on">Research</a>
+      <a href="people.html">People</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#news">News</a>
     </nav>
-    <a class="btn" href="#join">Contact</a>
+    <a class="btn" href="index.html#join">Contact</a>
   </header>
 </div>
-
 <section class="hero" id="top">
   <img class="bg" src="assets/hero-1600.jpg" srcset="assets/hero-1000.jpg 1000w, assets/hero-1600.jpg 1600w, assets/hero-2400.jpg 2400w" sizes="100vw" alt="Fluorescence micrograph from the Gentry Lab: clusters of cultured cells with green cytoskeletal staining and blue nuclei on a black field">
   <div class="scrim"></div>
@@ -270,7 +34,7 @@ h2.sec{
   <div class="hero-in">
     <div class="shell">
       <h1>Decoding glycogen metabolism &amp;<br>the diseases it drives.</h1>
-      <p>We define how glycogen metabolism goes wrong in glycogen storage diseases, in the degenerating brain, and in cancer, and turn the mechanisms into pre-clinical drugs and clinical biomarkers.</p>
+      <p>We define how glycogen metabolism goes wrong in rare storage diseases, in the degenerating brain, and in cancer. Then we turn those mechanisms into pre-clinical drugs and clinical biomarkers.</p>
       <div class="cta">
         <a class="btn light" href="#research">Our research</a>
         <a class="btn" href="#join" style="background:transparent;border-color:rgba(255,255,255,.55);color:#fff">Join the lab</a>
@@ -283,52 +47,22 @@ h2.sec{
   <div class="top">
     <p class="eyebrow">How we work</p>
     <p class="arc">Understand <span>&rarr;</span> Diagnose <span>&rarr;</span> Treat</p>
-    <p class="blurb">We elucidate mechanistic understanding of how events at the atomic & molecular levels impact cellular physiology and organismal biology & human disease.</p>
   </div>
   <div class="steps">
-    <div class="step">
-      <h3>Understand</h3>
-      <p>Structural and enzymological work on laforin, malin, and the machinery that keeps a branched polymer soluble instead of letting it precipitate.</p>
-    </div>
-    <div class="step">
-      <h3>Diagnose</h3>
-      <p>Mass spectrometry imaging and metabolomics that show where glycogen and its metabolites actually sit in tissue — and what is worth measuring in patients.</p>
-    </div>
-    <div class="step">
-      <h3>Treat</h3>
-      <p>Three therapeutic platforms in development: antibody–enzyme fusions, antisense oligonucleotides, and small molecules against aberrant glycogen accumulation.</p>
-    </div>
+    <div class="step"><h3>Understand</h3><p>Structural and enzymological work on laforin, malin, and the machinery that keeps a branched polymer soluble instead of letting it precipitate.</p></div>
+    <div class="step"><h3>Diagnose</h3><p>Mass spectrometry imaging and metabolomics that show where glycogen and its metabolites actually sit in tissue, and what is worth measuring in patients.</p></div>
+    <div class="step"><h3>Treat</h3><p>Three therapeutic platforms in development: antibody-enzyme fusions, antisense oligonucleotides, and small molecules against aberrant glycogen accumulation.</p></div>
   </div>
 </section>
 
 <section class="research" id="research">
   <div class="shell">
-    <div class="sechead">
-      <p class="eyebrow">Research</p>
-      <h2 class="sec">One molecule, several diseases.</h2>
-      <p class="lede">Glycogen sits at a control point in cell metabolism, which is why the same question reaches across conditions that look nothing alike.</p>
-    </div>
+    <h2 class="pagetitle" style="margin-bottom:44px">Research</h2>
     <div class="pillars">
-      <div class="pillar">
-        <span class="tag">Mechanism</span>
-        <h3>Glycogen enzymology</h3>
-        <p>Laforin's glycogen phosphatase activity and malin's E3 ubiquitin ligase activity were both first defined here. We keep working on the carbohydrate-binding modules and regulatory logic that hold the system together.</p>
-      </div>
-      <div class="pillar">
-        <span class="tag">Disease</span>
-        <h3>Storage disease &amp; neurodegeneration</h3>
-        <p>Lafora disease, Pompe, Cori, and Glut1 deficiency syndrome — plus the aggregate biology that glycogen shares with Alzheimer's disease.</p>
-      </div>
-      <div class="pillar">
-        <span class="tag">Disease</span>
-        <h3>Cancer metabolism</h3>
-        <p>Ewing sarcoma is an aggressive pediatric bone and soft-tissue cancer, and outcomes remain poor when it spreads or returns. Its cells accumulate unusually large amounts of glycogen, a hallmark noted for decades and never explained. We showed that reducing glycogen strongly suppresses tumor growth, which makes glycogen a therapeutic vulnerability. We are now working out why the tumor needs it, and how to exploit that.</p>
-      </div>
-      <div class="pillar">
-        <span class="tag">Therapy</span>
-        <h3>Therapeutics &amp; biomarkers</h3>
-        <p>Antibody–enzyme fusions that digest polyglucosan in muscle, heart and brain; antisense oligonucleotides; small molecules; and the biomarkers a trial would need to read out.</p>
-      </div>
+      <div class="pillar"><h3>Glycogen metabolism and its multifaceted roles</h3><p class="ph-block">[Overview paragraph. Two or three sentences on what this programme asks, what the lab has shown, and where it is going. Replace this text.]</p><a class="more" href="#">Read more &rarr;</a></div>
+      <div class="pillar"><h3>Glycogen in GSDs and neurodegeneration</h3><p class="ph-block">[Overview paragraph. Two or three sentences on what this programme asks, what the lab has shown, and where it is going. Replace this text.]</p><a class="more" href="#">Read more &rarr;</a></div>
+      <div class="pillar"><h3>Glycogen in cancer metabolism</h3><p class="ph-block">[Overview paragraph. Two or three sentences on what this programme asks, what the lab has shown, and where it is going. Replace this text.]</p><a class="more" href="#">Read more &rarr;</a></div>
+      <div class="pillar"><h3>Cutting-edge tools</h3><p class="ph-block">[Overview paragraph. Two or three sentences on what this programme asks, what the lab has shown, and where it is going. Replace this text.]</p><a class="more" href="#">Read more &rarr;</a></div>
     </div>
     <div class="factrow">
       <div class="stats">
@@ -345,56 +79,45 @@ h2.sec{
 </section>
 
 <section class="people shell" id="people">
-  <div class="sechead">
-    <p class="eyebrow">People</p>
-    <h2 class="sec">Who we are</h2>
-  </div>
+  <h2 class="pagetitle" style="margin-bottom:44px">Gentry Lab Members</h2>
   <div class="peoplegrid">
     <div class="pi">
       <div class="ph">MG</div>
       <div class="txt">
         <h3>Matthew S. Gentry, PhD</h3>
-        <p class="role">Professor &amp; Chair, Biochemistry &amp; Molecular Biology</p>
-        <p>Director, Lafora Epilepsy Cure Initiative. ASBMB Fellow. NINDS Story Landis Award for mentorship.</p>
+        <p class="role">Professor &amp; Chair</p>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:22px">
       <div class="roster">
-        <div class="member"><div class="av">PD</div><div><b>[NAME]</b><span>Postdoctoral Fellow</span></div></div>
-        <div class="member"><div class="av">GS</div><div><b>[NAME]</b><span>Graduate Student</span></div></div>
-        <div class="member"><div class="av">RS</div><div><b>[NAME]</b><span>Research Scientist</span></div></div>
-        <div class="member"><div class="av">GS</div><div><b>[NAME]</b><span>Graduate Student</span></div></div>
-        <div class="member"><div class="av">UG</div><div><b>[NAME]</b><span>Undergraduate</span></div></div>
-        <div class="member"><div class="av">LM</div><div><b>[NAME]</b><span>Lab Manager</span></div></div>
+        <div class="member"><div class="av">LF</div><div><b>Léa Fermont</b><span>Postdoctoral Associate</span></div></div>
+        <div class="member"><div class="av">MC</div><div><b>Matthieu Colpaert</b><span>Postdoctoral Associate</span></div></div>
+        <div class="member"><div class="av">PS</div><div><b>Pankaj Singh</b><span>Postdoctoral Associate</span></div></div>
+        <div class="member"><div class="av">TC</div><div><b>Tiantian Chen</b><span>Postdoctoral Associate</span></div></div>
+        <div class="member"><div class="av">AC</div><div><b>Alex Cantrell</b><span>PhD Student</span></div></div>
+        <div class="member"><div class="av">KB</div><div><b>Kayla Brennan</b><span>PhD Student</span></div></div>
       </div>
-      <a class="more" href="#">Meet the whole lab &rarr;</a>
+      <a class="more" href="people.html">Meet the whole lab &rarr;</a>
     </div>
   </div>
 </section>
 
 <section class="pubs" id="publications">
   <div class="shell">
-    <div class="sechead">
-      <p class="eyebrow">Publications</p>
-      <h2 class="sec">Selected publications</h2>
-      <p class="lede">The full list is generated from a BibTeX file — adding a paper means pasting one entry.</p>
-    </div>
+    <h2 class="pagetitle" style="margin-bottom:44px">Selected publications</h2>
     <div class="publist">
-      <div class="pub"><span class="yr">2025</span><span class="ttl"><span class="ph-row">Publication list is being imported.</span></span><span class="jr">Journal</span></div>
-      <div class="pub"><span class="yr">2025</span><span class="ttl"><span class="ph-row">Coming soon</span></span><span class="jr">Journal</span></div>
-      <div class="pub"><span class="yr">2024</span><span class="ttl"><span class="ph-row">Coming soon</span></span><span class="jr">Journal</span></div>
-      <div class="pub"><span class="yr">2024</span><span class="ttl"><span class="ph-row">Coming soon</span></span><span class="jr">Journal</span></div>
-      <div class="pub"><span class="yr">2023</span><span class="ttl"><span class="ph-row">Coming soon</span></span><span class="jr">Journal</span></div>
+      <div class="pub"><span class="yr">2025</span><span class="ttl"><span class="ph-row">[Authors. Title. Journal.]</span></span><a class="lnk" href="#">PubMed</a></div>
+      <div class="pub"><span class="yr">2025</span><span class="ttl"><span class="ph-row">[Authors. Title. Journal.]</span></span><a class="lnk" href="#">PubMed</a></div>
+      <div class="pub"><span class="yr">2024</span><span class="ttl"><span class="ph-row">[Authors. Title. Journal.]</span></span><a class="lnk" href="#">PubMed</a></div>
+      <div class="pub"><span class="yr">2024</span><span class="ttl"><span class="ph-row">[Authors. Title. Journal.]</span></span><a class="lnk" href="#">PubMed</a></div>
+      <div class="pub"><span class="yr">2023</span><span class="ttl"><span class="ph-row">[Authors. Title. Journal.]</span></span><a class="lnk" href="#">PubMed</a></div>
     </div>
     <div style="margin-top:26px"><a class="more" href="#">All publications &rarr;</a></div>
   </div>
 </section>
 
 <section class="news shell" id="news">
-  <div class="sechead">
-    <p class="eyebrow">News</p>
-    <h2 class="sec">Recent from the lab</h2>
-  </div>
+  <h2 class="pagetitle" style="margin-bottom:44px">News</h2>
   <div class="newsgrid">
     <div class="newsitem"><span class="d">Jun 2026</span><span class="x">News item coming soon</span></div>
     <div class="newsitem"><span class="d">May 2026</span><span class="x">News item coming soon</span></div>
@@ -406,23 +129,17 @@ h2.sec{
 <section class="join" id="join">
   <div class="shell joingrid">
     <div>
-      <h2>We're recruiting postdocs and graduate students.</h2>
-      <p>Backgrounds in enzymology, carbohydrate chemistry, neuroscience, cancer metabolism, or mass spectrometry all fit. Write with a CV and a paragraph on what you want to work on.</p>
+      <h2>We're recruiting...</h2>
     </div>
     <a class="btn light" href="mailto:[LAB EMAIL]">Get in touch</a>
   </div>
 </section>
-
 <footer class="foot">
   <div class="shell">
     <div class="footgrid">
       <div>
         <h4>Contact</h4>
-        <p>
-          <a href="mailto:[LAB EMAIL]">[LAB EMAIL]</a><br>
-          [PHONE]<br>
-          <a href="#">LinkedIn</a>
-        </p>
+        <p><a href="mailto:[LAB EMAIL]">[LAB EMAIL]</a><br>[PHONE]<br><a href="#">LinkedIn</a></p>
       </div>
       <div>
         <h4>Address</h4>
@@ -430,10 +147,7 @@ h2.sec{
       </div>
       <div>
         <h4>Supported by</h4>
-        <div class="funders">
-          <span class="funder">NIH / NINDS</span>
-          <span class="funder">[FUNDER]</span>
-        </div>
+        <div class="funders"><span class="funder">NIH / NINDS</span><span class="funder">[FUNDER]</span></div>
       </div>
     </div>
     <div class="footlogo">
@@ -442,6 +156,5 @@ h2.sec{
     </div>
   </div>
 </footer>
-
 </body>
 </html>
