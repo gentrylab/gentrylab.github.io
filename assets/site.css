@@ -80,9 +80,11 @@ h2.sec{font-family:"Archivo",sans-serif;font-weight:700;font-size:38px;line-heig
 
 /* ---------- approach ---------- */
 .approach{padding:96px var(--pad) 88px;}
-.approach .top{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;}
-.arc{font-family:"Archivo",sans-serif;font-weight:600;color:var(--blue);font-size:clamp(30px,3.6vw,48px);letter-spacing:-.022em;line-height:1.1;margin:0;}
-.arc span{color:var(--blue);font-weight:400;padding:0 .12em;}
+.approach .top{display:flex;flex-direction:column;align-items:flex-start;gap:18px;}
+.arc{font-family:"Archivo",sans-serif;font-weight:600;color:var(--blue);font-size:clamp(30px,3.6vw,48px);letter-spacing:-.022em;line-height:1.1;margin:0;width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;}
+.arc .cell{display:flex;align-items:baseline;gap:.28em;}
+.arc .ar{font-weight:400;}
+@media (max-width:1080px){.arc{display:flex;flex-wrap:wrap;gap:.2em .6em;}}
 .approach .top .blurb{max-width:60ch;font-size:17.5px;color:var(--muted);margin:6px 0 0;}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:56px;}
 .step{border-top:2px solid var(--blue);padding-top:18px;display:flex;flex-direction:column;gap:9px;}
