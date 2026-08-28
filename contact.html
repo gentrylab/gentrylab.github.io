@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact | Gentry Laboratory</title>
+<meta name="description" content="Contact the Gentry Laboratory at the University of Florida.">
+<link rel="icon" href="assets/favicon-simple-512.png" type="image/png" sizes="512x512">
+<link rel="icon" href="assets/favicon-simple-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="headwrap">
+  <header class="head">
+    <a href="index.html" aria-label="Gentry Laboratory, home"><img src="assets/logo-lockup.png" alt="Gentry Laboratory, University of Florida"></a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#research">Research</a>
+      <a href="people.html">People</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#news">News</a>
+    </nav>
+    <a class="btn" href="contact.html">Contact</a>
+  </header>
+</div>
+<section class="masthead">
+  <div class="shell">
+    <h1>Contact</h1>
+  </div>
+</section>
+
+<div class="shell" style="padding-top:72px;padding-bottom:96px">
+  <div class="contactgrid">
+
+    <form class="form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="[WEB3FORMS ACCESS KEY]">
+      <input type="hidden" name="subject" value="New message from the Gentry Lab website">
+      <input type="hidden" name="from_name" value="Gentry Lab website">
+      <!-- Optional: after the final web address is settled, add a thank-you page:
+           <input type="hidden" name="redirect" value="https://YOUR-SITE/thanks.html"> -->
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="frow">
+        <div class="field">
+          <label for="fn">First name <span class="req">*</span></label>
+          <input id="fn" name="First name" type="text" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="ln">Last name <span class="req">*</span></label>
+          <input id="ln" name="Last name" type="text" required autocomplete="family-name">
+        </div>
+      </div>
+
+      <div class="frow">
+        <div class="field">
+          <label for="em">Email <span class="req">*</span></label>
+          <input id="em" name="Email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="inst">Institution</label>
+          <input id="inst" name="Institution" type="text" autocomplete="organization">
+        </div>
+      </div>
+
+      <fieldset class="reasons">
+        <legend>Contacting for <span class="req">*</span></legend>
+          <label><input type="radio" name="Contacting for" value="Research collaboration" required> Research collaboration</label>
+          <label><input type="radio" name="Contacting for" value="Postdoc or research position" required> Postdoc or research position</label>
+          <label><input type="radio" name="Contacting for" value="Graduate or undergraduate research opportunity" required> Graduate or undergraduate research opportunity</label>
+          <label><input type="radio" name="Contacting for" value="Patient or family inquiry" required> Patient or family inquiry</label>
+          <label><input type="radio" name="Contacting for" value="Media or speaking request" required> Media or speaking request</label>
+          <label><input type="radio" name="Contacting for" value="Something else" required> Something else</label>
+      </fieldset>
+
+      <div class="field">
+        <label for="msg">Message <span class="req">*</span></label>
+        <textarea id="msg" name="Message" required placeholder="A few sentences is plenty."></textarea>
+      </div>
+
+      <p class="formnote">Please do not send personal medical information through this form. The lab cannot give medical advice or comment on individual cases.</p>
+
+      <button class="submit" type="submit">Send message</button>
+    </form>
+
+    <aside class="side">
+      <div>
+        <h3>Address</h3>
+        <p>Department of Biochemistry &amp; Molecular Biology<br>
+        1200 Newell Drive<br>
+        Gainesville, FL 32610<br>
+        University of Florida</p>
+      </div>
+      <div>
+        <h3>Direct</h3>
+        <p><a href="mailto:[LAB EMAIL]">[LAB EMAIL]</a><br>[PHONE]</p>
+      </div>
+      <div>
+        <h3>Joining the lab</h3>
+        <p>Postdoctoral and student enquiries are welcome. Attach a CV and say in a paragraph what you would want to work on.</p>
+      </div>
+    </aside>
+
+  </div>
+</div>
+<footer class="foot">
+  <div class="shell">
+    <div class="footgrid">
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:[LAB EMAIL]">[LAB EMAIL]</a><br>[PHONE]<br><a href="#">LinkedIn</a></p>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <p>1200 Newell Drive<br>Gainesville, FL 32610<br>University of Florida</p>
+      </div>
+      <div>
+        <h4>Supported by</h4>
+        <div class="funders"><span class="funder">NIH / NINDS</span><span class="funder">[FUNDER]</span></div>
+      </div>
+    </div>
+    <div class="footlogo">
+      <img src="assets/logo-lockup.png" alt="Gentry Laboratory">
+      <span class="copy">© 2026 Gentry Laboratory · Department of Biochemistry &amp; Molecular Biology</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
