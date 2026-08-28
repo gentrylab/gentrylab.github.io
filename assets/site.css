@@ -217,11 +217,28 @@ h2.sec{font-family:"Lora",Georgia,serif;font-weight:600;font-size:38px;line-heig
   .pi{max-width:340px;}
   .pi .ph{aspect-ratio:4/5;}
   .pi-row .shot{max-width:260px;}
-  .nav{display:none;}
-  .steps,.pillars,.factrow,.stats,.peoplegrid,.newsgrid,.joingrid,.footgrid,.alumlist{grid-template-columns:1fr;}
+  .nav{gap:18px;font-size:13px;}
+  .steps,.pillars,.factrow,.stats,.peoplegrid,.pi-row,.newsgrid,.joingrid,.footgrid,.alumlist{grid-template-columns:1fr;}
   .roster{grid-template-columns:repeat(2,minmax(0,1fr));}
   .cards,.cards.wide{grid-template-columns:repeat(2,minmax(0,1fr));}
   .pub{grid-template-columns:64px minmax(0,1fr);}
   .pub .lnk{grid-column:2;justify-self:start;}
   .masthead{padding:130px 0 48px;}
+}
+
+/* narrow windows: the header wraps onto a second row instead of dropping the nav */
+@media (max-width:880px){
+  .headwrap{padding:0 14px;}
+  .head{flex-wrap:wrap;gap:10px 18px;padding:12px 14px 12px 18px;border-radius:18px;}
+  .head img{height:38px;}
+  .head .btn{margin-left:auto;padding:10px 18px;font-size:13px;}
+  .nav{order:3;width:100%;margin-left:0;gap:16px;flex-wrap:wrap;font-size:13px;
+       border-top:1px solid var(--line);padding-top:10px;}
+  .masthead{padding:176px 0 48px;}
+}
+@media (max-width:480px){
+  :root{--pad:22px;}
+  .nav{gap:12px;font-size:12px;}
+  .head img{height:32px;}
+  .masthead{padding:184px 0 40px;}
 }
