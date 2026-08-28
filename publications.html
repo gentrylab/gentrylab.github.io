@@ -663,7 +663,22 @@
     state.q = e.target.value.trim().toLowerCase(); apply();
   });
 
-  apply();
+    apply();
+
+  // hide the filter bar while scrolling down, bring it back on any upward scroll
+  var bar = document.querySelector(".filterbar"), last = window.scrollY, queued = false;
+  function onScroll(){
+    var y = window.scrollY, d = y - last;
+    if (Math.abs(d) > 5) {
+      if (d > 0 && y > 260) bar.classList.add("tuck");
+      else if (d < 0) bar.classList.remove("tuck");
+      last = y;
+    }
+    queued = false;
+  }
+  window.addEventListener("scroll", function(){
+    if (!queued) { queued = true; requestAnimationFrame(onScroll); }
+  }, {passive:true});
 })();
 </script>
 <footer class="foot">
