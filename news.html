@@ -20,8 +20,8 @@
     <a href="index.html" aria-label="Gentry Laboratory, home"><img src="assets/logo-lockup.png" alt="Gentry Laboratory, University of Florida"></a>
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="index.html#research">Research</a>
-      <a href="people.html">People</a>
+      <span class="navitem"><a href="index.html#research">Research</a><span class="dropwrap"><span class="drop"><a href="index.html#r1">Glycogen and its many roles</a><a href="index.html#r2">Glycogen in GSDs and neurodegeneration</a><a href="index.html#r3">Glycogen in cancer metabolism</a><a href="index.html#r4">Cutting-edge tools</a></span></span></span>
+      <span class="navitem"><a href="people.html">People</a><span class="dropwrap"><span class="drop"><a href="people.html#pi">Principal Investigator</a><a href="people.html#postdocs">Postdoctoral Associates</a><a href="people.html#phd-students">PhD Students</a><a href="people.html#masters-students">Master's Students</a><a href="people.html#staff">Staff</a><a href="people.html#undergraduates">Undergraduate Researchers</a><a href="people.html#alumni">Alumni</a></span></span></span>
       <a href="publications.html">Publications</a>
       <a href="news.html" class="on">News</a>
     </nav>
@@ -122,7 +122,7 @@
       </div>
     </div>
     <div class="footlogo">
-      <img src="assets/logo-lockup.png" alt="Gentry Laboratory">
+      <img src="assets/logo-stack.png" alt="Gentry Laboratory">
       <span class="copy">© 2026 Gentry Laboratory · Department of Biochemistry &amp; Molecular Biology</span>
     </div>
   </div>
@@ -131,12 +131,25 @@
 (function(){
   var els=[document.querySelector(".headwrap"),document.querySelector(".filterbar")].filter(Boolean);
   if(!els.length) return;
+  var veil=document.querySelector(".topveil");
   var last=window.scrollY, queued=false;
+  var quiet=location.hash?Date.now()+1400:0;
+  document.addEventListener("click",function(ev){
+    var a=ev.target.closest&&ev.target.closest('a[href*="#"]');
+    if(a) quiet=Date.now()+1400;
+  },true);
+  function show(y){
+    els.forEach(function(e){e.classList.remove("tuck");});
+    if(veil) veil.classList[y>260?"add":"remove"]("show");
+  }
   function onScroll(){
     var y=window.scrollY, d=y-last;
+    if(Date.now()<quiet || Math.abs(d)>600){ show(y); last=y; queued=false; return; }
     if(Math.abs(d)>5){
-      if(d>0 && y>260) els.forEach(function(e){e.classList.add("tuck");});
-      else if(d<0)     els.forEach(function(e){e.classList.remove("tuck");});
+      if(d>0 && y>260){
+        els.forEach(function(e){e.classList.add("tuck");});
+        if(veil) veil.classList.remove("show");
+      } else if(d<0){ show(y); }
       last=y;
     }
     queued=false;
@@ -144,6 +157,7 @@
   window.addEventListener("scroll",function(){
     if(!queued){queued=true;requestAnimationFrame(onScroll);}
   },{passive:true});
+  window.addEventListener("hashchange",function(){ quiet=Date.now()+1400; show(window.scrollY); last=window.scrollY; });
 })();
 </script>
 
