@@ -546,7 +546,7 @@ fieldset.reasons legend{font-size:15px;font-weight:500;color:var(--ink);padding:
 }
 .person .em:hover{text-decoration:underline;}
 
-.pi-row{display:grid;grid-template-columns:300px minmax(0,1fr);gap:44px;align-items:start;}
+.pi-row{display:grid;grid-template-columns:300px minmax(0,1fr);gap:44px;align-items:center;}
 .pi-row .shot{position:relative;width:100%;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--peri);display:flex;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:700;font-size:50px;letter-spacing:-.02em;color:#8892BA;}
 .pi-row .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .pi-row .bio{display:flex;flex-direction:column;gap:12px;max-width:60ch;padding-top:4px;}
