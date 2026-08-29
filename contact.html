@@ -9,10 +9,11 @@
 <link rel="icon" href="assets/favicon-simple-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta name="robots" content="noindex">
+<script>(function(){try{var t=localStorage.getItem("gl-theme");if(t==="light"){document.documentElement.classList.remove("dark");}else{document.documentElement.classList.add("dark");}}catch(e){document.documentElement.classList.add("dark");}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=a62380e9">
+<link rel="stylesheet" href="assets/site.css?v=143da10e">
 </head>
 <body>
 <div class="headwrap">
@@ -25,6 +26,7 @@
       <a href="publications.html">Publications</a>
       <a href="news.html">News</a>
     </nav>
+    <button class="themebtn" type="button" id="themebtn" aria-label="Switch colour theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1Z"/></svg></button>
     <a class="btn" href="contact.html">Contact</a>
   </header>
 </div>
@@ -160,6 +162,13 @@
     if(!queued){queued=true;requestAnimationFrame(onScroll);}
   },{passive:true});
   window.addEventListener("hashchange",function(){ quiet=Date.now()+1400; show(window.scrollY); last=window.scrollY; });
+})();
+(function(){
+  var btn=document.getElementById("themebtn"); if(!btn) return;
+  btn.addEventListener("click",function(){
+    var root=document.documentElement, dark=root.classList.toggle("dark");
+    try{ localStorage.setItem("gl-theme", dark?"dark":"light"); }catch(e){}
+  });
 })();
 </script>
 
