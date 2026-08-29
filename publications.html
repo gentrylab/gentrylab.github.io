@@ -9,7 +9,7 @@
 <link rel="icon" href="assets/favicon-simple-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta name="robots" content="noindex">
-<script>(function(){try{var t=localStorage.getItem("gl-theme");if(t==="light"){document.documentElement.classList.remove("dark");}else{document.documentElement.classList.add("dark");}}catch(e){document.documentElement.classList.add("dark");}})();</script>
+<script>(function(){try{var r=document.documentElement,q=matchMedia("(prefers-color-scheme: dark)");function set(d){r.classList.toggle("dark",d);}var t=localStorage.getItem("gl-theme");set(t?t==="dark":q.matches);if(!t)q.addEventListener("change",function(e){if(!localStorage.getItem("gl-theme"))set(e.matches);});}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -578,7 +578,7 @@
       <!-- PUBS:END -->
     </div>
     <p class="empty" id="pubempty" hidden>No publications match these filters.</p>
-    <p class="pubstamp">Automatically compiled from PubMed. Last updated <!-- STAMP:START -->28 August 2026<!-- STAMP:END -->.</p>
+    <p class="pubstamp">Automatically compiled from PubMed. Last updated <!-- STAMP:START -->29 August 2026<!-- STAMP:END -->.</p>
   </section>
 </div>
 
