@@ -18,6 +18,7 @@ import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGE = ROOT / "publications.html"
@@ -238,7 +239,8 @@ def main():
     years = sorted({r["year"] for r in records}, reverse=True)
     page = splice(page, "YEARS", '<option value="all">All years</option>'
                   + "".join(f'<option value="{y}">{y}</option>' for y in years))
-    page = splice(page, "STAMP", datetime.date.today().strftime("%d %B %Y"))
+    page = splice(page, "STAMP",
+                  datetime.datetime.now(ZoneInfo("America/New_York")).strftime("%d %B %Y"))
     PAGE.write_text(page)
     DATA.write_text(json.dumps(records, ensure_ascii=False, indent=1))
     print("wrote publications.html and pubs.json")
