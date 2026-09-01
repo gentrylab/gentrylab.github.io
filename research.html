@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/site.css?v=2a175219">
 <style>
-/* Research new format，do not need site.css */
+/* Styles added for the Research page. Self-contained; site.css is untouched. */
 .rhead{padding:124px 0 20px}
 .rrule{border:0;border-top:1px solid var(--line);margin:0}
 .dark .rrule{border-top-color:rgba(255,255,255,.16)}
@@ -106,7 +106,7 @@
   var POS = {"main": [[1919.6912920079976, -205.4398787691043], [1691.5032264910362, -204.96274605501935], [1465.0915521022519, -201.82124952198376], [1236.8930197463515, -181.71144020878774], [1007.4789894953154, -165.15790209825903], [779.4098567983029, -167.41030322429017], [554.1711831115153, -137.98039537841342], [329.32235482498606, -97.09609009906607], [120.00579405984237, -11.344857516368515], [-68.421205693036, 120.69583758983262], [-265.51461525485263, 235.52226707058412], [-443.70740645502866, 376.7150316312743], [-615.7488362770173, 526.0775424055839], [-795.9604825043468, 668.5149853903406], [-999.8032210373005, 766.067140401831], [-1207.322272905636, 859.470076178321]], "pre": [[-1408.3303732694692, 962.7742076935862], [-1618.2692898614696, 1048.8309134182246], [-1830.0264116823096, 1131.115215433579], [-2038.1112936463292, 1224.17116794614], [-2237.598321678066, 1329.0393602022527], [-2455.018955136139, 1377.4251499208272], [-2680.124660224108, 1355.387760401005], [-2905.9253046635913, 1329.2180036059133], [-3140.091775707969, 1322.1244897642127]], "blk": [[-239.25115765647607, 471.90028063144445], [-241.39204960181416, 698.7824568412084], [-247.7152760040264, 925.8767143816984], [-242.68587916212056, 1153.765796102185], [-223.43365997144758, 1378.3137067053217], [-263.1972258038287, 1597.475234652847], [-370.8488217539003, 1796.3957184884805], [-482.5786910645003, 1994.3533490659256], [-579.9726737862451, 2207.4229767222305]], "ord": [[1919.7, -205.4], [1691.5, -205.0], [1465.1, -201.8], [1236.9, -181.7], [1007.5, -165.2], [779.4, -167.4], [554.2, -138.0], [329.3, -97.1], [120.0, -11.3], [-68.4, 120.7], [-265.5, 235.5], [-443.7, 376.7], [-615.7, 526.1], [-796.0, 668.5], [-999.8, 766.1], [-1207.3, 859.5], [-239.3, 471.9], [-241.4, 698.8], [-247.7, 925.9], [-242.7, 1153.8], [-223.4, 1378.3], [-263.2, 1597.5], [-370.8, 1796.4], [-482.6, 1994.4], [-580.0, 2207.4], [1546.5, -15.8], [665.1, 27.7], [659.9, -368.0], [-53.0, 823.9], [-456.0, 1168.5], [1392.3, 152.1], [575.9, 236.5], [525.1, -550.0], [142.3, 942.4], [-673.3, 1238.0], [1262.6, 338.9], [455.9, 433.7], [375.7, -724.0], [584.7, -775.0], [341.6, 1046.5], [-897.6, 1260.3], [1190.2, 550.4], [293.5, 591.2], [192.8, -866.6], [617.2, -1000.6], [774.9, -891.3], [504.4, 1197.3], [-1125.7, 1259.2], [1145.2, 771.9], [11.5, -1005.7], [-6.6, -755.1], [580.8, -1224.2], [976.8, -1001.9], [615.2, 1395.0], [1027.0, 966.8], [-186.1, -1117.9], [-206.3, -648.1], [488.3, -1433.0], [1196.7, -1057.4], [-389.7, -1220.6], [-392.7, -1015.5], [-416.0, -554.2], [-248.4, -419.1], [356.8, -1615.8], [1351.4, -1192.3], [-565.6, -1361.4], [-584.8, -897.6], [-642.1, -503.8], [-315.5, -201.6], [204.3, -1784.8], [1498.5, -1364.3], [-727.0, -1522.5], [-765.5, -758.9], [-865.1, -455.2], [-444.3, -14.3], [-1091.7, -438.2], [-616.8, 134.8], [-1319.8, -432.3], [-1179.5, -222.0], [-813.5, 243.4], [-1538.8, -379.7], [-1243.2, -3.0], [-1023.6, 332.0], [-1753.9, -303.8], [-1349.3, 196.0], [-1477.6, 384.3]], "lf": [-1753.9329385521914, -303.78234488145466], "ml": [-579.9726737862451, 2207.4229767222305], "gp": [1498.4746507962086, -1364.2715944492797], "ag": [-579.9726737862451, 2207.4229767222305]}, SLOTW = 160.00, BENCHY = 720.0;
   var RINGPTS = "80.00,0.00 42.00,45.00 -42.00,45.00 -80.00,0.00 -42.00,-45.00 42.00,-45.00", HEXPTS = "81.89,0.00 40.95,70.92 -40.94,70.92 -81.89,0.00 -40.95,-70.92 40.95,-70.92";
   var PAD0 = 86;
-  var SHV = 578.0, SCY = 375.0;   // 动画只用酶架以上的部分，别压到蛋白
+  var SHV = 578.0, SCY = 375.0;   // the animation uses only the area above the bench, so it never covers the proteins
   if (matchMedia('(prefers-reduced-motion: reduce)').matches){
     document.body.classList.add('reduced'); return;
   }
@@ -164,7 +164,7 @@
   var gaas = [].slice.call(document.querySelectorAll('#gaas .gaa'));
   var CURA = [], CURT = [], PRESA = [], PARA = [];
 
-  // 右边那颗：整份克隆，去掉 id 免得撞车；结构式那一层不要
+  // Right particle: a full clone with ids stripped so selectors do not collide; the formula layer is dropped
   var molB = mol.cloneNode(true);
   molB.removeAttribute('id');
   [].slice.call(molB.querySelectorAll('[id]')).forEach(function(el){ el.removeAttribute('id'); });
@@ -183,14 +183,14 @@
     gyg:  molB.querySelector('.gygG'),
     gbnd: molB.querySelector('.gygbond')
   };
-  var CUR = [];                       // 右边那颗每个残基当前的位置
+  var CUR = [];                       // current position of each residue in the right particle
   function wrapd(d){ return ((d + 180) % 360 + 360) % 360 - 180; }
   QB._m = -1;
   function applyMorph(m){
     if (Math.abs(QB._m - m) < 0.0015) return;
     QB._m = m;
     var i, n, el;
-    // 错开一点：靠还原端的先挪，整条链像是被重新排过，而不是一起乱窜
+    // Stagger it: residues near the reducing end move first, so the chain reads as being re-laid rather than all lurching at once
     var SPREAD = 0.78;
     for (i = 0; i < QB.res.length; i++){
       el = QB.res[i]; n = +el.getAttribute('data-n');
@@ -227,7 +227,7 @@
     var total = story.offsetHeight - window.innerHeight;
     var p = cl(total > 0 ? (-r.top)/total : 0);
 
-    // ---- A 九种糖：外圈先退，葡萄糖留下
+    // ---- A: the nine sugars; the outer ring exits first, glucose remains
     var araw = seg(p,'sugars');
     Q.sug.forEach(function(el){
       var x0 = +el.getAttribute('data-x'), y0 = +el.getAttribute('data-y');
@@ -242,15 +242,15 @@
     if (glclab) glclab.style.opacity = 1 - cl((araw-0.72)/0.28);
 
 
-    // ---- B 链：一个一个长到 NDRAMA 个
-    // 前 6 个慢慢加（还看得清结构式），后面 19 个快起来
+    // ---- B: chain grows one residue at a time up to NDRAMA
+    // The first 6 are added slowly (formulas still legible); the remaining 19 speed up
     var tc = seg(p,'chain');
     var nB = (tc < 0.42) ? (1 + (tc/0.42)*5)
                          : (6 + ((tc-0.42)/0.58)*(NDRAMA-6));
-    // ---- F 后半段：其余残基按 BFS 陆续出现
+    // ---- F, later part: remaining residues appear in BFS order
     var nF = NDRAMA + seg(p,'particle') * (N - NDRAMA);
     var nAll = Math.max(nB, p > T.particle[0] ? nF : nB);
-    // 拆解不再用「从外往里一刀切」，改成按 GP / AGL 的事件表走（见后面 degApply 那段）
+    // Degradation is no longer a blunt outside-in cut; it follows the GP / AGL event table (see degApply below)
     var eat = 0;
     function vis(o){
       var f = nAll - o;
@@ -259,7 +259,7 @@
     Q.res.forEach(function(el){ el.style.opacity = vis(+el.getAttribute('data-o')); });
     Q.bnd.forEach(function(el){ el.style.opacity = vis(+el.getAttribute('data-o')); });
 
-    // ---- UDP-glucose：GYS1 吸过来，糖并进链，UDP 扔掉
+    // ---- UDP-glucose: GYS1 pulls it in, the sugar joins the chain, UDP is discarded
     var frac0 = nB - Math.floor(nB);
     var inChain = (p > T.chain[0] - 0.004 && p < T.chain[1] + 0.004);
     var kk2 = Math.min(Math.floor(nB), NMAIN - 1);
@@ -283,7 +283,7 @@
       udpchip.style.opacity = (inChain && frac0 > 0.58) ? (1-fc)*0.95 : 0;
     }
 
-    // ---- C 结构式收成六边形（只走 MORPH）
+    // ---- C: formulas contract into hexagons (only MORPH of the way)
     var hx = seg(p,'hexify');
     var fSub  = 1 - cl(hx/0.35);
     var fFill = cl((hx-0.24)/0.36);
@@ -295,8 +295,8 @@
     Q.rng.forEach(function(el){ el.style.opacity = fRng; });
     Q.bdet.forEach(function(el){ el.style.opacity = fRng * vis(+el.getAttribute('data-o')); });
 
-    // GYG 接在还原端的 C1 上
-    // GYG 一直在：它是还原端，整颗颗粒都挂在它身上，不该中途消失
+    // GYG attaches to the reducing end's C1
+    // GYG stays for the whole take: it is the reducing end and the entire particle hangs off it
     var gygOn = (p > 0.055);
     var gygA = gygOn ? cl((p-0.055)/0.024) * (1 - cl((p - 0.965)/0.03)) : 0;
     if (gygbond) gygbond.style.opacity = gygA * fRng;
@@ -311,9 +311,9 @@
       el.style.opacity = (+host.getAttribute('data-o') === kTip) ? fSub : 0;
     });
 
-    // ---- D GBE：整块刚体从链的最外端搬到 BR_AT 的 C6 上
+    // ---- D, GBE: the block moves as a rigid body from the chain tip onto BR_AT's C6
     var d  = seg(p,'branch1');
-    var u  = 1 - ease(cl((d - 0.14)/0.68));      // u=1 切之前，u=0 到位
+    var u  = 1 - ease(cl((d - 0.14)/0.68));      // u=1 pre-cut, u=0 in place
     blk.setAttribute('transform','translate('+(DX*u).toFixed(2)+','+(DY*u).toFixed(2)
       +') rotate('+(DA*u).toFixed(3)+','+B0X.toFixed(1)+','+B0Y.toFixed(1)+')');
     var cs = Math.cos(DA*u*Math.PI/180), sn = Math.sin(DA*u*Math.PI/180);
@@ -323,7 +323,7 @@
       el.setAttribute('data-cx', (B0X + ax*cs - ay*sn + DX*u).toFixed(1));
       el.setAttribute('data-cy', (B0Y + ax*sn + ay*cs + DY*u).toFixed(1));
     });
-    // 接点那根键：切断 -> 消失 -> 在 C6 上接回来
+    // The junction bond: cut -> disappear -> reform on C6
     if (brroot){
       var a0 = POS.main[NMAIN-1], a1 = POS.main[10];
       var hx0 = B0X + DX*u, hy0 = B0Y + DY*u;
@@ -333,7 +333,7 @@
       var attached = (u > 0.97 || u < 0.03) ? 1 : 0;
       brroot.style.opacity = vis(NMAIN) * attached;
     }
-    // 被搬那一段：GBE 认准它的时候变浅蓝，接好之后褪回统一色
+    // The moved block turns pale blue while GBE has hold of it, then fades back to the common colour
     var hiT = ease(cl(d/0.13)) * (1 - ease(cl(seg(p,'grow2')/0.55)));
     Q.blkres.forEach(function(el){
       var pg = el.querySelector('.poly');
@@ -343,9 +343,9 @@
                pg.setAttribute('stroke-opacity', hiT.toFixed(3)); }
     });
 
-    // ---- 字幕
+    // ---- subtitles
 
-    // ---- 世界滚动：拉开的时候整颗慢慢转到最上镜的角度
+    // ---- world roll: as the camera pulls back, the particle turns to its most photogenic angle
     var ra = ease(cl((p - ROLL0)/(ROLL1 - ROLL0))) * ROLLA;
     var rc = Math.cos(ra*Math.PI/180), rs = Math.sin(ra*Math.PI/180);
     function rw(x, y){
@@ -353,7 +353,7 @@
       return [PVX + dx*rc - dy*rs, PVY + dx*rs + dy*rc];
     }
 
-    // ---- 还是一颗的时候：取景框跟着看得见的残基走
+    // ---- while still one particle: the frame follows the visible residues
     var minx = 1e9, maxx = -1e9, miny = 1e9, maxy = -1e9, any = false;
     function box0(x, y, h){ var q = rw(x, y); box(q[0], q[1], h); }
     function box(x, y, h){
@@ -387,7 +387,7 @@
       }
     }
 
-    // ---- 两颗各自的变换。分屏之后镜头不再跟内容，两边各占一个固定槽位。
+    // ---- per-copy transforms. After the split the camera stops following content; each side occupies a fixed slot.
     function scrB(mx, my){
       var q = rw(mx, my);
       return [CX + Bw*((q[0] + Btx) - CX), CY + Bw*((q[1] + Bty) - CY)];
@@ -439,19 +439,36 @@
       Aw = Bw = WDEG; Atx = dA2[0]; Aty = dA2[1]; Btx = dB2[0]; Bty = dB2[1];
       Bop = 1; mB = 0;
     }
+    // ---- attention. The two halves act one after the other, so whichever side is
+    // performing reads at full strength and the other steps back to DIMV.
+    //   split1 .. fate 0.34   left acts (laforin + malin strip phosphate), right dim
+    //   fate 0.34 .. 0.56     right comes up, both readable while the popup lands
+    //   fate 0.56 .. end      right acts (polyglucosan morph), left dim
+    //   collapse              left brightens back as it takes the frame
+    var DIMV = 0.32, Aop = 1;
+    if (p >= T.split1[0] && p < T.fate[1]){
+      var fq = (p < T.fate[0]) ? 0 : tf;
+      Bop *= DIMV + (1-DIMV)*ease(cl((fq - 0.34)/0.12));
+      Aop  = 1 - (1-DIMV)*ease(cl((fq - 0.56)/0.14));
+    } else if (p >= T.fate[1] && p < T.collapse[1]){
+      Aop = DIMV + (1-DIMV)*ease(cl(seg(p,'collapse')/0.62));
+    }
+
     copyA.setAttribute('transform', ctr(Aw, Atx, Aty));
     copyB.setAttribute('transform', ctr(Bw, Btx, Bty, ra*(1-mB)));
+    copyA.style.opacity = Aop;
     copyB.style.opacity = Bop;
     copyB.style.display = Bop < 0.005 ? 'none' : '';
 
-    // ---- 磷酸：合成完之后长出来。
-    // laforin 和 malin 先结合成复合物，然后挨个走到带磷酸的位置，走到哪儿哪儿的磷酸才掉。
+    // ---- phosphates: they appear once synthesis is done.
+    // laforin and malin first form a complex, then visit each phosphorylated site
+    // in turn; a phosphate only comes off once the complex reaches it.
     var phoIn = ease(cl(seg(p,'phospho')/0.75));
     var NPH = PHOA.length;
-    var tvis = (p < T.fate[0]) ? 0 : cl((tf - 0.08)/0.25);   // 巡视进度
+    var tvis = (p < T.fate[0]) ? 0 : cl((tf - 0.08)/0.25);   // patrol progress
     var siteF = tvis * NPH;
     var si = Math.min(Math.floor(siteF), NPH-1), sfr = cl(siteF - si);
-    var homeXY = [PHOXY[0][0] - STEP*3.4, PHOXY[0][1] + STEP*2.6];   // 结合的地方
+    var homeXY = [PHOXY[0][0] - STEP*3.4, PHOXY[0][1] + STEP*2.6];   // where they bind
     var fromXY = (si === 0) ? homeXY : PHOXY[si-1];
     var mvf = ease(cl(sfr/0.55));
     var LFX = fromXY[0] + (PHOXY[si][0]-fromXY[0])*mvf;
@@ -461,11 +478,11 @@
       var n = +el.parentNode.getAttribute('data-n');
       var k = PHOAI[n];
       if (k === undefined){ el.style.opacity = 0; return; }
-      var gone = cl((siteF - k - 0.68)/0.22);          // 复合物走到了才掉
+      var gone = cl((siteF - k - 0.68)/0.22);          // only drops once the complex has arrived
       el.style.opacity = phoIn * (1 - gone) * (+el.parentNode.style.opacity || 0);
     });
 
-    // ---- 右边那颗：形变成多聚葡萄糖，磷酸越来越多
+    // ---- right particle: morphs into polyglucosan, accumulating phosphate
     if (Bop > 0.004){
       applyMorph(mB);
       var eatB = (p > T.degrade[0])
@@ -499,10 +516,12 @@
       if (QB.gbnd) QB.gbnd.style.opacity = 0;
     }
 
-    // ---- 左边那颗：按文献的顺序拆
-    //   GP 从非还原端一个个磷酸解，出 G1P，停在离分支点 4 个残基处；
-    //   AGL 先把外面 3 个（麦芽三糖）整体搬到附近另一条链的非还原端，
-    //   再水解掉最后那个 alpha-1,6 上的葡萄糖，放出游离葡萄糖。
+    // ---- left particle: digested in the order the literature describes.
+    //   GP phosphorolyses residues off the non-reducing ends one at a time,
+    //   releasing G1P, and stalls 4 residues from a branch point;
+    //   AGL then transfers the outer 3 (maltotriose) as a unit to the
+    //   non-reducing end of a nearby chain, and hydrolyses the last
+    //   alpha-1,6 glucose, releasing free glucose.
     var degK = -1, degF = 0;
     if (p > T.degrade[0]){
       var prog = cl((p - T.degrade[0] - 0.012)/(T.degrade[1] - T.degrade[0] - 0.020));
@@ -548,7 +567,7 @@
       });
     }
 
-    // ---- 溶酶体：右边那颗在里面
+    // ---- lysosome: the right particle sits inside it
     if (lyso){
       var lo = cl((seg(p,'split2') - 0.50)/0.38) * (p > T.split2[0] ? 1 : 0);
       var lr = lrG;
@@ -559,7 +578,7 @@
       if (lc2) lc2.setAttribute('r', (lr - 7.5).toFixed(1));
     }
 
-    // ---- 中缝虚线和两侧的标题
+    // ---- centre dashed divider and the labels on each side
     var divg = document.getElementById('divider');
     if (divg){
       var inSplit1 = (p > T.split1[0] && p < T.collapse[0] + 0.02);
@@ -576,11 +595,11 @@
       }
     }
 
-    // ---- 合回一颗之后，顶上打「glycogen degradation」
+    // ---- once merged back into one, print 'glycogen degradation' across the top
     var ttl = document.getElementById('toptitle');
     if (ttl) ttl.style.opacity = band(p, T.collapse[0]+0.020, 1.02, 0.016);
 
-    // ---- 右侧弹窗：laforin 那边干完活之后才出来，出完再开始变形
+    // ---- right-hand popup: appears only after the laforin side finishes, and the morph starts after it goes
     var popg = document.getElementById('popup');
     if (popg){
       var pop = (p > T.fate[0] && p < T.fate[1]) ? band(tf, 0.48, 0.90, 0.045) : 0;
@@ -589,7 +608,7 @@
       popg.style.display = pop < 0.005 ? 'none' : '';
     }
 
-    // ---- 拆下来的小分子。胞质这边一个事件一个：GP 出 G1P（带 P），AGL 出游离葡萄糖（不带 P）
+    // ---- released small molecules. On the cytosolic side, one per event: GP gives G1P (with P), AGL gives free glucose (no P)
     beadsCyt.forEach(function(el, i){
       if (degK < 0){ el.style.opacity = 0; return; }
       var idx = degK - i;
@@ -606,7 +625,7 @@
         +(q3[1]+Math.sin(an3)*rr3).toFixed(1)+') scale('+(1.35+0.5*(1-age)).toFixed(2)+')');
       el.style.opacity = (1-age)*(1-age);
     });
-    // 溶酶体这边：GAA 两种键都切，出来的全是游离葡萄糖
+    // Lysosomal side: GAA cleaves both linkages and yields only free glucose
     var dgl = cl((p - T.degrade[0] - 0.010)/(T.degrade[1] - T.degrade[0] - 0.020));
     beadsLys.forEach(function(el, i){
       if (p <= T.degrade[0]){ el.style.opacity = 0; return; }
@@ -618,7 +637,7 @@
         +(SLY + Math.sin(an4)*rr4*0.9).toFixed(1)+') scale('+(1.3+0.4*(1-ph3)).toFixed(2)+')');
       el.style.opacity = (1-ph3)*cl(dgl*6);
     });
-    // 溶酶体里的几个 GAA：各自在里面慢慢游
+    // Several GAA copies drift slowly around inside the lysosome
     gaas.forEach(function(el, i){
       var on = (p > T.degrade[0] + 0.004) ? 1 : 0;
       if (!on){ el.style.opacity = 0; return; }
@@ -631,14 +650,14 @@
       el.style.opacity = cl((p - T.degrade[0] - 0.004)/0.02);
     });
 
-    // ---- 最后：从溶酶体里拎一个六边形飞到画面中间，再放大成那个葡萄糖
+    // ---- finale: lift one hexagon out of the lysosome, fly it to centre and scale it up into the glucose
     var oo = (p < T.outro[0]) ? 0 : seg(p, 'outro');
     var out = cl((oo - 0.10)/0.18);
     var endh = document.getElementById('endhex');
     if (endh){
       if (oo <= 0){ endh.style.opacity = 0; }
       else {
-        // 起点：溶酶体里偏左上那个刚被 GAA 放出来的游离葡萄糖
+        // Start point: the free glucose GAA just released, upper left inside the lysosome
         var sx0 = SBX - lrG*0.28, sy0 = SLY + lrG*0.14, sc0e = 0.19;
         var te = ease(cl((oo - 0.06)/0.56));
         var ex = sx0 + (CX - sx0)*te, ey = sy0 + (SCY - 34 - sy0)*te;
@@ -646,8 +665,8 @@
         endh.setAttribute('transform','translate('+ex.toFixed(1)+','+ey.toFixed(1)
           +') scale('+esc.toFixed(4)+')');
         endh.style.opacity = cl(oo/0.03);
-        var lb = ease(cl((oo - 0.09)/0.15));    // 路上先出名字
-        var gg = ease(cl((oo - 0.24)/0.22));    // 落位之前显出化学式
+        var lb = ease(cl((oo - 0.09)/0.15));    // the name appears first, in flight
+        var gg = ease(cl((oo - 0.24)/0.22));    // the structure resolves before it lands
         var eh = endh.querySelector('.ehx'), eg = endh.querySelector('.eglc');
         var el2 = endh.querySelector('.elab');
         if (eh) eh.style.opacity = 1 - gg;
@@ -666,7 +685,7 @@
     world.setAttribute('transform','translate(0,0)');
     cam.setAttribute('transform','translate(0,0)');
 
-    // ---- 酶架和演员
+    // ---- bench and actors
     var molcx = any ? (minx+maxx)/2 : PVX, molcy = any ? (miny+maxy)/2 : PVY;
     function scrA(mx, my){
       var q = rw(mx, my);
@@ -709,12 +728,12 @@
         var ax = qq[0]-B0X, ay = qq[1]-B0Y;
         return [B0X + ax*c2 - ay*s2 + DX*uu, B0Y + ax*s2 + ay*c2 + DY*uu, 0.96, -0.28];
       }
-      // laforin 和 malin：先在一处结合，然后一起沿着颗粒走，走到哪个磷酸就摘哪个
+      // laforin and malin: bind at one spot, then travel the particle together, stripping each phosphate they reach
       if (key === 'laforin')
         return (p > T.split1[1]-0.012 && p < T.fate[0]+0.115) ? [LFX, LFY, -0.30, -0.95] : null;
       if (key === 'malin')
         return (p > T.split1[1]-0.012 && p < T.fate[0]+0.115) ? [LFX, LFY, -0.30, -0.95] : null;
-      // GP 和 AGL：整幕都在，各自停在自己最近一次动手的那个残基旁边
+      // GP and AGL: on stage for the whole act, each parked beside the residue it last acted on
       if (key === 'GP' || key === 'AGL'){
         if (degK < 0) return null;
         var wantAgl = (key === 'AGL');
@@ -726,7 +745,7 @@
         }
         return null;
       }
-      if (key === 'GAA') return null;      // 溶酶体里那几个单独画
+      if (key === 'GAA') return null;      // the copies inside the lysosome are drawn separately
       return null;
     }
     var LAFSXY = null;
@@ -754,7 +773,7 @@
                      key === 'laforin' || key === 'malin'));
         var xmin = 34*sc0 + 16, xmax = halfL ? (CX - 34*sc0 - 10) : (SW - 34*sc0 - 16);
         if (key === 'malin' && LAFSXY){
-          // malin 一开始离得远，慢慢贴到 laforin 身上，之后两个一起走
+          // malin starts far away, closes in on laforin, and from then on they travel together
           var dk = 1 - ease(cl(tf/0.10));
           sx = LAFSXY[0] + 30 + dk*200;
           sy = LAFSXY[1] + 42 + dk*130;
@@ -772,14 +791,17 @@
       m._o = m._o === undefined ? op : m._o + (op-m._o)*0.28;
       m.setAttribute('transform','translate('+m._x.toFixed(1)+','+m._y.toFixed(1)
         +') scale('+m._s.toFixed(4)+')');
-      m.style.opacity = m._o * (1 - out);
+      // Actors that work the left half step back with it when attention moves right
+      var sideDim = (key === 'laforin' || key === 'malin' ||
+                     key === 'GP' || key === 'AGL') ? Aop : 1;
+      m.style.opacity = m._o * (1 - out) * sideDim;
       if (hasOwn) slot._busy = m._o > 0.5;
     });
     var benchOn = cl((p - 0.050)/0.020) * (1 - cl((p - T.outro[0] - 0.006)/0.018));
     if (slots['GAA']) slots['GAA']._busy = (p > T.degrade[0] + 0.004);
     Object.keys(slots).forEach(function(key){
       var sl = slots[key];
-      sl.style.opacity = benchOn;                 // GYG 出场时八个一起出现
+      sl.style.opacity = benchOn;                 // all eight appear together when GYG enters
       var ic = sl.querySelector('.ic'), nm = sl.querySelector('.nm'), ph = sl.querySelector('.ph');
       if (ic) ic.style.opacity = sl._busy ? 0 : 1;
       if (ph) ph.style.opacity = sl._busy ? 1 : 0;
@@ -825,7 +847,8 @@
   </div>
 </footer>
 <script>
-/* 四个子集切换：没有 hash 就落在 r1。切换只换面板，不滚动。 */
+/* Tab switching for the four subsections. No hash falls back to r1.
+   Switching swaps panels only; it does not scroll. */
 (function(){
   var tabs = [].slice.call(document.querySelectorAll('.rtab'));
   var panels = {};
@@ -837,7 +860,7 @@
     tabs.forEach(function(a){ a.classList.toggle('on', a.getAttribute('data-tab') === id); });
     Object.keys(panels).forEach(function(k){ panels[k].hidden = (k !== id); });
     document.title = (id === 'r1' ? 'Research' : 'Research') + ' | Gentry Laboratory';
-    window.dispatchEvent(new Event('scroll'));   /* 让动画重新算一帧 */
+    window.dispatchEvent(new Event('scroll'));   /* make the animation redraw a frame */
   }
   pick((location.hash || '#r1').slice(1));
   window.addEventListener('hashchange', function(){
