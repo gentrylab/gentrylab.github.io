@@ -21,9 +21,8 @@
 .dark .rrule{border-top-color:rgba(255,255,255,.16)}
 .rtabsbar{background:var(--white);border-bottom:1px solid var(--line)}
 .dark .rtabsbar{background:#0A0D16;border-bottom-color:rgba(255,255,255,.16)}
-.rtabs{display:flex;gap:10px;padding:14px 0;overflow-x:auto;scrollbar-width:none}
-.rtabs::-webkit-scrollbar{display:none}
-.rtab{flex:0 0 auto;text-decoration:none;font-family:"Plus Jakarta Sans",system-ui,sans-serif;
+.rtabs{display:flex;flex-wrap:wrap;gap:10px;padding:14px 0}
+.rtab{flex:0 1 auto;text-decoration:none;font-family:"Plus Jakarta Sans",system-ui,sans-serif;
   font-size:14.5px;font-weight:500;line-height:1.25;color:var(--ink);
   border:1px solid var(--line);border-radius:12px;padding:10px 16px;background:var(--white);
   transition:background .16s,border-color .16s,color .16s}
@@ -44,6 +43,21 @@
   padding:0 0 8px}
 .rhint{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12.5px;color:var(--muted);
   text-align:center;padding:10px 0 0}
+
+/* Narrow windows. The tabs wrap instead of scrolling out of sight, and the title
+   clears the header, which stacks onto a second row below 880px (see site.css). */
+@media (max-width:1080px){
+  .rtab{font-size:13.5px;padding:9px 14px}
+}
+@media (max-width:880px){
+  .rhead{padding:176px 0 18px}
+  .rtabs{gap:8px;padding:12px 0}
+  .rtab{font-size:13px;padding:8px 12px;border-radius:10px}
+}
+@media (max-width:480px){
+  .rhead{padding:184px 0 16px}
+  .rtab{font-size:12.5px;padding:8px 11px}
+}
 </style>
 </head>
 <body>
@@ -61,7 +75,7 @@
     <a class="btn" href="contact.html">Contact</a>
   </header>
 </div>
-<section class="rhead"><div class="shell"><h1 class="pagetitle">Research</h1></div></section><div class="shell"><hr class="rrule"></div><div class="rtabsbar"><div class="shell"><div class="rtabs" role="tablist"><a class="rtab on" href="#r1" data-tab="r1">Glycogen and its multifaceted roles</a><a class="rtab" href="#r2" data-tab="r2">Glycogen in GSDs and neurodegeneration</a><a class="rtab" href="#r3" data-tab="r3">Glycogen in cancer metabolism</a><a class="rtab" href="#r4" data-tab="r4">Cutting-edge tools</a></div></div></div><section class="rpanel" id="p-r1"><div class="shell"><div class="rintro"><h2>Glycogen and its multifaceted roles</h2><p>Scroll down to follow one single glucose grow into glycogen and back again.</p><p class="rhint">glycogen synthesis and glycogen degredation</p></div></div><style>
+<section class="rhead"><div class="shell"><h1 class="pagetitle">Research</h1></div></section><div class="shell"><hr class="rrule"></div><div class="rtabsbar"><div class="shell"><div class="rtabs" role="tablist"><a class="rtab on" href="#r1" data-tab="r1">Glycogen and its multifaceted roles</a><a class="rtab" href="#r2" data-tab="r2">Glycogen in GSDs and neurodegeneration</a><a class="rtab" href="#r3" data-tab="r3">Glycogen in cancer metabolism</a><a class="rtab" href="#r4" data-tab="r4">Cutting-edge tools</a></div></div></div><section class="rpanel" id="p-r1"><div class="shell"><div class="rintro"><h2>Glycogen and its multifaceted roles</h2><p>[Overview paragraph. Two or three sentences on what this programme asks, what the lab has shown, and where it is going. Replace this text.]</p><p class="rhint">scroll to follow one glycogen particle from a single glucose and back again</p></div></div><style>
 #story{position:relative;height:1000vh;margin:0}
 #story .sticky{position:sticky;top:0;height:100vh;display:flex;align-items:center;
  justify-content:center;overflow:hidden;background:#FFFFFF}
