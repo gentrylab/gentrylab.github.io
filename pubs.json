@@ -49,6 +49,65 @@
   "kind": "research"
  },
  {
+  "pmid": "42843973",
+  "doi": "10.26508/lsa.202603750",
+  "pmc": "PMC13646730",
+  "title": "Autolysosomal enhancer GHF201 attenuates pathophysiology in a mucopolysaccharidosis type I mouse model",
+  "journal": "Life Sci Alliance",
+  "year": 2026,
+  "authors": [
+   "Kumar P",
+   "Merquiol E",
+   "Avraham T",
+   "Sinai-Turyanski R",
+   "Singh PK",
+   "Ribas RA",
+   "Sweetat S",
+   "Sprecher U",
+   "Muchtar N",
+   "Gupta M",
+   "Mishra K",
+   "Ojha SK",
+   "Yekhtin Z",
+   "Glickstein H",
+   "Shalev O",
+   "Eliassaf A",
+   "Morshina A",
+   "Segev-Yekutiel H",
+   "Garti S",
+   "Garti N",
+   "Rosenmann H",
+   "Weil M",
+   "Gentry MS",
+   "Blum G",
+   "Kakhlon O"
+  ],
+  "types": [
+   "Journal Article"
+  ],
+  "mesh": [
+   "Animals",
+   "Mice",
+   "Disease Models, Animal",
+   "Lysosomes",
+   "Mucopolysaccharidosis I",
+   "Iduronidase",
+   "Female",
+   "Mice, Knockout",
+   "Autophagy",
+   "Fibroblasts",
+   "Glycosaminoglycans",
+   "Brain",
+   "Humans",
+   "Cathepsins"
+  ],
+  "kw": [],
+  "tags": [
+   "neuro"
+  ],
+  "kind": "research"
+ },
+ {
   "pmid": "42556344",
   "doi": "10.1016/j.xcrm.2026.102968",
   "pmc": "PMC13522764",
@@ -162,6 +221,46 @@
   ],
   "kind": "research",
   "title_html": "Epm2b<sup>P71A</sup> and Epm2b<sup>D148N</sup> knock-in mouse models of Lafora disease exhibit distinct and pronounced neurological alterations"
+ },
+ {
+  "pmid": "42878880",
+  "doi": "10.1007/s00415-026-14211-3",
+  "pmc": "PMC13672255",
+  "title": "Fucose supplementation as a novel treatment approach for GLUT1 deficiency syndrome",
+  "journal": "J Neurol",
+  "year": 2026,
+  "authors": [
+   "Moomann J",
+   "Fobker M",
+   "Gardemann C",
+   "Schulze Westhoff P",
+   "Freeze HH",
+   "Ng BG",
+   "Schwartz O",
+   "Debus O",
+   "Singh PK",
+   "Colpaert MG",
+   "Valdivia GG",
+   "D'Agati O",
+   "Gentry MS",
+   "Park J",
+   "Marquardt T"
+  ],
+  "types": [
+   "Letter"
+  ],
+  "mesh": [],
+  "kw": [
+   "Fucose",
+   "GLUT1 deficiency syndrome",
+   "Hypoglycorrhachia",
+   "Ketogenic diet"
+  ],
+  "tags": [
+   "gsd",
+   "therapy"
+  ],
+  "kind": "research"
  },
  {
   "pmid": "42204369",
@@ -576,6 +675,75 @@
   "kind": "research"
  },
  {
+  "pmid": "42826186",
+  "doi": "10.1126/sciadv.aej6157",
+  "pmc": "PMC13632743",
+  "title": "S-Nitrosylation of glycogen phosphorylase regulates nuclear glycogenolysis and is impaired in metabolic liver disorders",
+  "journal": "Sci Adv",
+  "year": 2026,
+  "authors": [
+   "Soria LR",
+   "D'Alessio AM",
+   "Casertano V",
+   "Polishchuk E",
+   "Pasquadibisceglie A",
+   "Boffa I",
+   "Diana A",
+   "De Cegli R",
+   "De Stefano L",
+   "Nusco E",
+   "Arena P",
+   "Audano M",
+   "Mitro N",
+   "Morita T",
+   "Baba O",
+   "Tarallo A",
+   "Parenti G",
+   "Gurung S",
+   "Perocheau DP",
+   "Selvestrel D",
+   "Sorrentino G",
+   "Rajas F",
+   "Ronzitti G",
+   "Muro AF",
+   "Erez A",
+   "Thomsen KL",
+   "Singh PK",
+   "Arends CJ",
+   "Braghini MR",
+   "Safarikia S",
+   "Schindler JC",
+   "Baruteau J",
+   "Lee YM",
+   "Alisi A",
+   "Spada M",
+   "Dionisi-Vici C",
+   "Stamler JS",
+   "Gentry MS",
+   "Brunetti-Pierri N"
+  ],
+  "types": [
+   "Journal Article"
+  ],
+  "mesh": [
+   "Animals",
+   "Humans",
+   "Cell Nucleus",
+   "Glycogenolysis",
+   "Mice",
+   "Glycogen Phosphorylase",
+   "Nitric Oxide",
+   "Liver",
+   "Liver Diseases",
+   "Glycogen"
+  ],
+  "kw": [],
+  "tags": [
+   "other"
+  ],
+  "kind": "research"
+ },
+ {
   "pmid": "42154815",
   "doi": "10.1146/annurev-nutr-062024-111053",
   "pmc": "",
@@ -949,7 +1117,8 @@
    "Byrne BJ"
   ],
   "types": [
-   "Journal Article"
+   "Journal Article",
+   "Research Support, N.I.H., Extramural"
   ],
   "mesh": [
    "Animals",
